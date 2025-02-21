@@ -1,11 +1,14 @@
 Learn catalog(WEB):
 - Git
+  - Use git to push to github
 - Python(Py4E)
+  -Done learning from freecodecamp.org
+  -Done learning from mimo.org
+  -Pending Django
 - HTML
+  -Pending
 - CSS
+  -Pending
 - Javascript
+  -Pending
 - etc
-This is 'echo' test line
-
-This file is on main branch!!!
-This file is on new_branch and modified!!
