@@ -66,28 +66,6 @@ print_r(array_keys($phone_numbers));
 print_r(array_values($phone_numbers));
 
 
-
-
-
-$matrix = [ 
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9],
-];
-
-foreach ($matrix as $numbers) {
-    $sum = 0;
-    #print_r($numbers);
-    foreach ($numbers as $n){
-        #print_r($n."\n");
-        $sum += $n;
-    }
-    echo "{$sum}\n";
-}
-
-
-*/
-
 $first_name = "John";
 $last_name = "Doe";
 $name = $first_name . " " . $last_name;
@@ -114,5 +92,104 @@ echo "My brother's name is ";
 writeName("Ståle","?");
 
 
+
+$rest = substr("abcdef", 1); 
+echo $rest;
+
+
+
+$fruits = "apple,banana,orange";
+$fruit_list = explode(",", $fruits);
+print_r($fruit_list);
+
+$fruit_list = implode("-", $fruit_list);
+print_r($fruit_list);
+
+
+#多位数组求和所有值
+$matrix = [ 
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+];
+$sum = 0;
+foreach ($matrix as $numbers) {
+
+    for ($i=0; $i<count($numbers); $i=$i+1) {
+        
+        #echo $numbers[$i] . "\n";
+        $sum += $numbers[$i];
+    }
+    
+}
+echo $sum;
+
+
+
+
+$num = [1,2,3,4,5,6,7,8,9,10];
+$even_num = [];
+
+foreach ($num as $key => $value) {
+    #echo $key . " " . $value . "\n";
+    if ($value % 2 == 0) {
+        #$num[$key] = $value;
+        #echo "$num[$key]\n";
+        array_push($even_num, $value);
+    } else {
+        echo "not even number\n";
+    }
+}
+
+print_r($even_num);
+
+
+$counter = 0;
+
+while ($counter < 10) {
+    $counter += 1;
+
+    if ($counter % 2 == 0) {
+        echo "Skipping number $counter because it is even.\n";
+        continue;
+    }
+
+    echo "Executing - counter is $counter.\n";
+}
+
+
+
+$counter = 0;
+
+while ($counter < 10) {
+    $counter += 1;
+
+    if ($counter > 8) {
+        echo "counter is larger than 8, stopping the loop.\n";
+        break;
+    }
+
+    if ($counter % 2 == 0) {
+        echo "Skipping number $counter because it is even.\n";
+        continue;
+    }
+
+    echo "Executing - counter is $counter.\n";
+}
+
+*/
+
+
+
+$numbers = [56, 65, 26, 86, 66, 34, 78, 74, 67, 18, 34, 73, 45, 67, 75, 10, 60, 80, 74, 16, 86, 34, 12, 23, 42, 72, 36, 3, 73, 9, 92, 81, 94, 54, 97, 74, 45, 55, 70, 94, 96, 81, 86, 86, 84, 4, 32, 8, 96, 86, 87, 18, 84, 87, 59, 48, 32, 90, 17, 22, 82, 79, 66, 28, 17, 14, 80, 83, 66, 36, 21, 89, 68, 2, 51, 65, 20, 87, 48, 5, 1, 16, 60, 53, 84, 90, 16, 2, 37, 73, 57, 70, 57, 69, 68, 1, 24, 40, 72, 97];
+$count = 0;
+while ($count < count($numbers)-1) {
+    $count++;
+    if ($numbers[$count] % 2 == 0) {
+        continue;
+    }
+
+    echo $numbers[$count] . "\n";
+}
 
 ?>
