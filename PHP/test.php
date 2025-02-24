@@ -200,7 +200,7 @@ while ($c < count($numbers)-1) {
 }
 
 
-*/
+
 
 include("sum.php");
 
@@ -208,5 +208,124 @@ $numbers = [53, 65, 26, 86, 66, 34, 78, 74, 67, 18, 34, 73, 45, 67, 75, 10, 60, 
 $numbers = [1, 2, 3];
 
 echo sum($numbers);
+
+
+
+#类和继承
+class Student {
+    // constructor
+    public function __construct($first_name, $last_name) {
+        $this->first_name = $first_name;
+        $this->last_name = $last_name;
+        #echo $first_name;
+    }
+
+    public function say_name() {
+        #$fn = $this->first_name;
+        echo "My name is " . $this->first_name . " " . $this->last_name . ".\n";
+    }
+}
+
+$alex = new Student("Alex", "Jones");
+$alex->say_name();
+
+class MathStudent extends Student {
+    function sum_numbers($first_number, $second_number) {
+        $sum = $first_number + $second_number;
+        echo $this->first_name . " says that " . $first_number . " + " . $second_number . " is " . $sum;
+    }
+}
+
+$eric = new MathStudent("Eric", "Chang");
+$eric->say_name();
+$eric->sum_numbers(3, 5);
+
+*/
+
+#练习题
+/*
+Exercise
+Create a class called Car with a constructor that receives the brand and make year of the car, and a function called print_details that prints out the details of the car.
+
+For example, for a 2006 Toyota car, the following line would be printed out:
+
+This car is a 2006 Toyota.
+
+// TODO: Implement the Car class here
+class Car {
+
+    public function __construct($brand, $year) {
+
+        $this->brand = $brand;
+        $this->year = $year;
+        
+    }
+
+    public function print_details() {
+
+        echo "This car is a $this->year $this->brand.";
+
+    }
+}
+
+
+$car = new Car("Toyota", 2006);
+$car->print_details();
+
+
+
+
+
+#Exceptions
+try {
+  echo 2 / 0;
+} #catch (Exception $e) {
+  catch (Error $e) {  
+  echo "Caught Error: " . $e->getMessage();
+}
+*/
+
+/*
+try {
+    #echo @(2 / 0); // 使用 @ 符号抑制警告信息
+    echo 2 / 0;
+} catch (Error $e) {
+    echo "Caught error: " . $e->getMessage();
+}
+
+try {
+    // 尝试执行除零运算，这将触发一个 DivisionByZeroError 错误
+    $result = 2 / 0;
+    echo $result; // 这行代码不会被执行，因为错误会在之前被抛出
+} catch (Error $e) {
+    // 捕获 Error 类型的错误，包括 DivisionByZeroError
+    echo "Caught error: " . $e->getMessage(); // 输出错误信息
+}
+
+
+
+phpinfo();
+*/
+
+
+try {
+    2 / 0;
+} catch (Error $e) {
+    echo "Caught error: " . $e->getMessage();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ?>
