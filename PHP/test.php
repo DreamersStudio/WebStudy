@@ -305,7 +305,7 @@ try {
 
 
 phpinfo();
-*/
+
 
 
 try {
@@ -316,7 +316,32 @@ try {
 
 
 
+try {
+  echo 4/0;
+} catch (Exception $e) {
+  echo "Divided by zero!";
+} finally {
+  echo "\nThis will be outputed even if exception will happen!";
+}
+*/
 
+#Exercise
+/*
+Use a try-catch-finally block to first catch the exception and print out Exception caught! and then finally print out Done!. Your final output should look like: Exception caught! Done!
+*/
+# This function will throw an exception!
+function throw_exception() {
+  try {
+    throw new Exception("Exception!");
+  } catch (Exception $e) {
+    echo "Exception caught! ";
+  } finally {
+    echo "Done!";
+  }
+}
+
+# Surround the statement in a try-catch-finally block!
+throw_exception();
 
 
 
