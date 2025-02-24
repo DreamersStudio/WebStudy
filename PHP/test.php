@@ -328,7 +328,7 @@ try {
 #Exercise
 /*
 Use a try-catch-finally block to first catch the exception and print out Exception caught! and then finally print out Done!. Your final output should look like: Exception caught! Done!
-*/
+
 # This function will throw an exception!
 function throw_exception() {
   try {
@@ -345,10 +345,20 @@ throw_exception();
 
 
 
+$y=10; 
+echo ++$y;
+echo "\n";
+echo $y;
+
+*/
+
+$age=array("Peter"=>"35","Ben"=>"37","Joe"=>"43"); 
+sort($age); 
+print_r($age); 
 
 
-
-
+$arr = array("apple", "banana", "cherry");
+var_dump($arr);
 
 
 
