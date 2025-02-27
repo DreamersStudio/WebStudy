@@ -350,17 +350,44 @@ echo ++$y;
 echo "\n";
 echo $y;
 
-*/
+
 
 $age=array("Peter"=>"35","Ben"=>"37","Joe"=>"43"); 
 sort($age); 
 print_r($age); 
 
-
 $arr = array("apple", "banana", "cherry");
 var_dump($arr);
 
 
+#常量
+// bool define ( string $name , mixed $value [, bool $case_insensitive = false ] )
 
+// 不区分大小写的常量名
+define("GREETING", "欢迎访问 Runoob.com", true);
+echo greeting;  // 输出 "欢迎访问 Runoob.com"
+echo "\n" . PHP_VERSION;
+echo "\n" . PHP_OS;
+echo "\n" . PHP_INT_MAX;
+echo "\n" . E_ERROR;
+echo "\n" . E_WARNING;
+echo "\n" . E_PARSE;
+*/
+
+//超级全局变量
+$x = 75;
+$y = 25; 
+
+function addition()
+{
+$GLOBALS['z'] = $GLOBALS['a'] + $GLOBALS['y'];
+}
+
+addition();
+echo $z . "\n";
+echo "这是第 "  . __LINE__ .  " 行" . "\n";
+echo '该文件位于 " '  . __FILE__ . ' " ' . "\n";
+echo '该文件位于 " '  . __DIR__ . ' " ' . "\n";
+ . "\n";
 
 ?>
