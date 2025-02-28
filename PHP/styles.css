@@ -1,0 +1,50 @@
+body {
+  background-color: lightseagreen;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  color: gold;
+}
+
+.myForm {
+  font-size: 20px;
+  background-color: slateblue;
+  color: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(50vw - 40px);
+  height: calc(80vh - 40px);
+  border-radius: 0 150px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.form-row {
+  display: flex; /* 水平排列 */
+  align-items: center; /* 垂直居中 */
+  width: 100%; /* 占据容器宽度 */
+  margin: 5px 0; /* 添加元素间距 */
+}
+
+.form-row label {
+  width: 100px; /* 设置 label 宽度 */
+  text-align: right; /* 右对齐 label 文本 */
+  margin-right: 10px; /* 添加 label 和 input 之间的间距 */
+}
+
+.form-row input {
+  flex: 1; /* input 占据剩余空间 */
+}
